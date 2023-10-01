@@ -7,7 +7,26 @@ mongoose.connect("mongodb://127.0.0.1:27017/nodejs").then(()=>{
 
 
 const schema = new mongoose.Schema({
-    name:String
+    name:{
+        type:String,
+        require:true
+    },
+    email:{
+        type:String,
+        require:true
+    },
+    phone:{
+        type:Number,
+        unique:true
+    },
+    password:{
+        type:String,
+        require:true
+    },
+    confirmpassword:{
+        type:String,
+        require:true
+    }
 })
 
 
